@@ -1,0 +1,51 @@
+server:
+  port: 8441
+
+spring:
+  security.user:
+    name: "331723643" 
+    password: "busakie"
+  basic.enabled: false
+  servlet.multipart:
+    max-file-size: 10MB
+    max-request-size: 10MB
+  config.enabled: true
+  output.ansi.enabled: ALWAYS
+  mvc.throw-exception-if-no-handler-found: true
+  resources.add-mappings: false
+  main: 
+    allow-bean-definition-overriding: true
+    banner-mode: console
+  jackson: 
+    default-property-inclusion: non-null
+    mapper.accept-case-insensitive-enums: true
+    deserialization: 
+      fail-on-unknown-properties: true
+      fail-on-unresolved-object-ids: true
+         
+springdoc.info:
+  name: Payload Encrypter Applicaiton - Client
+  description: Payload Encrypter Applicaiton - Client
+  termsAndServiceUrl: ''
+  version: 1
+  contact:
+    email: bashkarsampath@gmail.com
+    name: Bashkar Sampath
+    url: https://www.linkedin.com/in/bashkarsampath/
+
+logging:
+   pattern:
+     console: '%d{yyyy-MM-dd HH:mm:ss.sss z} - [%thread] - %-5level- %logger{36} [%L] - %msg%n'
+   level: 
+    ROOT: INFO
+    com.bashkarsampath: INFO
+    org.apache.kafka: ERROR
+    org.hibernate: ERROR
+    org.springframework: INFO
+    org.springframework.secuity: ERROR
+    org.springframework.web: ERROR
+    org.springframework.ws.client.MessageTracing.received: ERROR
+    org.springframework.ws.client.MessageTracing.sent: ERROR
+    org.springframework.ws.server.MessageTracing.received: ERROR
+    org.springframework.ws.server.MessageTracing.sent: ERROR
+    reactor.netty.http.client: OFF
